@@ -1,0 +1,123 @@
+#section-four {
+    width: 100%;
+    max-width: 1920px;
+
+    margin: 100px auto 0 auto;
+
+
+    h2 {
+        font-family: $font;
+        font-size: calc($font-size * 4);
+        color: $font-color;
+        text-align: center;
+
+        margin-bottom: calc($margin * 2);
+    }
+
+    .question-container {
+        margin: 0 auto;
+
+        width: 90%;
+
+        .questions {
+            background-color: #13151d;
+            width: 100%;
+
+            color: $font-color;
+            font-family: $font;
+            font-size: calc($font-size * 2);
+
+            padding: 0 calc($padding * 4);
+            margin: calc($margin * 4) 0;
+
+            .question {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                width: 100%;
+                height: 80px;
+
+                cursor: pointer;
+                border: none;
+
+                font-weight: 900;
+
+                .cross-icon {
+                    font-size: calc($font-size * 4);
+                }
+            }
+
+            .answer {
+                display: none;
+                width: 100%;
+                background-color: #13151d;
+
+                color: silver;
+                font-family: $font;
+                font-size: calc($font-size * 2);
+                font-weight: lighter;
+
+                padding-bottom: calc($padding * 2);
+
+                li {
+                    list-style: circle;
+                    margin: $margin calc($margin * 5);
+                }
+            }
+
+            .show {
+                display: block;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    #section-four {
+        .question-container {
+            .questions {
+                font-size: calc($font-size * 2);
+
+                .question {
+                    .cross-icon {
+                        font-size: calc($font-size * 3);
+                    }
+                }
+
+                .answer {
+                    font-size: calc($font-size * 1.6);
+                }
+
+
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #section-four {
+        .question-container {
+            .questions {
+                margin: calc($margin * 4) 0;
+                padding: 0 calc($padding * 2);
+                font-size: calc($font-size * 1.8);
+
+                .question {
+                    .cross-icon {
+                        font-size: calc($font-size * 2.5);
+                    }
+                }
+
+                .answer {
+                    font-size: calc($font-size * 1.4);
+
+                    li {
+                        margin: $margin calc($margin * 3);
+                    }
+                }
+            }
+        }
+    }
+}
